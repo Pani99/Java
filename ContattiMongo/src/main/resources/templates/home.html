@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<title>Home Page</title>
+</head>
+<body>
+	<div class="container">
+		<div class="pb-2 mt-4 mb-2">
+			<h1>Gestione Contatti</h1>
+		</div>
+		<div class="col-md-5" style="margin-top: 30px; margin-bottom: 30px;">
+			<form method="post" th:action="@{/}" th:object="${contatto}">
+				<div class="form-group">
+					<label for="nome">Nome</label> <input type="text"
+						th:field="*{nome}" class="form-control" required>
+				</div>
+				<div class="form-group">
+					<label for="cognome">Cognome</label> <input type="text"
+						th:field="*{cognome}" class="form-control" required>
+				</div>
+				<div class="form-group">
+					<label for="username">Username</label> <input type="text"
+						th:field="*{username}" class="form-control" required>
+				</div>
+				<div class="form-group">
+					<label for="eta">Eta</label> <input type="text"
+						th:field="*{eta}" class="form-control" required>
+				</div>
+				<button style="margin-top: 30px;" type="submit"
+					class="btn btn-primary">Salva contatto</button>
+			</form>
+		</div>
+
+		<table class="table table-hover">
+			<thead>
+				<tr>
+				<th>Id</th>
+					<th>Nome</th>
+					<th>Cognome</th>
+					<th>Username</th>
+					<th>Et&agrave;</th>
+					<th style="width: 100px;">Modifica</th>
+					<th style="width: 100px;">Elimina</th>
+					
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="contatto: ${listaContatti}">
+				<td th:text=${contatto.id}></td>
+					<td th:text=${contatto.nome}></td>
+					<td th:text=${contatto.cognome}></td>
+					<td th:text=${contatto.username}></td>
+					<td th:text=${contatto.eta}></td>
+					<td><a th:href="@{|/modifica/${contatto.id}|}">
+							<button type="button" class="btn btn-warning bt-sm">Modifica</button>
+					</a></td>
+					<td><a th:href="@{|/elimina/${contatto.id}|}">
+							<button type="button" class="btn btn-danger bt-sm">Elimina</button>
+					</a></td>
+				</tr>
+			</tbody>
+		</table>
+		<p><strong>Modulo per la ricerca in base allo Username</strong></p>
+		<div class="col-md-5" style="margin-top: 30px; margin-bottom: 30px;">
+			<form method="get" th:action="@{/statistica}" th:object="${contatto}">
+		<div class="form-group">
+					<label for="username">Username</label> <input type="text"
+						th:field="*{username}" class="form-control" required>
+				</div>
+				<button style="margin-top: 30px;" type="submit"
+					class="btn btn-dark">Ricerca contatto</button>
+		</form>
+	</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	margin-bottom: 320px;
+	background-color: rgb(0, 198, 198);
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+#titolino  {
+    background: #000000;
+    opacity: 0.7;
+    
+}
+
+footer {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 300px;
+	background-color: #111;
+	color: white;
+}
+
+footer nav {
+	float: left;
+	padding: 30px;
+}
+
+footer section {
+	float: left;
+	padding: 30px;
+}
+
+p.copyright {
+	clear: both;
+	margin-left: 30px;
+	padding-bottom: 30px;
+}
+
+a{	
+	color: rgb(170, 0, 0);
+}
+
+@media screen and (max-width:725px) {
+	footer {
+		height: 480px;
+	}
+	body {
+		margin-bottom: 500px;
+	}
+}
+
+td{
+	margin: 20px;
+	
+}

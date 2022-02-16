@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<title>Statistca</title>
+</head>
+<body>
+	<div class="container">
+		<div class="pb-2 mt-4 mb-2">
+			<h1>listaContatti</h1>
+		</div>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>Cognome</th>
+					<th>Username</th>
+					<th>Eta</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="contatto: ${usercontatto}">
+					<td th:text=${contatto.nome}></td>
+					<td th:text=${contatto.cognome}></td>
+					<td th:text=${contatto.username}></td>
+					<td th:text=${contatto.eta}></td>
+				</tr>
+			</tbody>
+		</table>
+		<div>
+			<p>
+				Conteggio contatti: <strong><span th:text="${conteggio}"></span></strong>
+			</p>
+		</div>
+
+		<div class="pb-2 mt-4 mb-2">
+			<h1>contattiGiovani</h1>
+		</div>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>Cognome</th>
+					<th>Username</th>
+					<th>Eta</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="contatto: ${contattiGiovani}">
+					<td th:text=${contatto.nome}></td>
+					<td th:text=${contatto.cognome}></td>
+					<td th:text=${contatto.username}></td>
+					<td th:text=${contatto.eta}></td>
+				</tr>
+			</tbody>
+		</table>
+	
+	<div class="pb-2 mt-4 mb-2">
+			<h1>contattoIM</h1>
+		</div>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>Cognome</th>
+					<th>Username</th>
+					<th>Eta</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="contatto: ${contattoIM}">
+					<td th:text=${contatto.nome}></td>
+					<td th:text=${contatto.cognome}></td>
+					<td th:text=${contatto.username}></td>
+					<td th:text=${contatto.eta}></td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<div class="pb-2 mt-4 mb-2">
+			<h1>contattoFA</h1>
+		</div>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>Cognome</th>
+					<th>Username</th>
+					<th>Eta</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="contatto: ${contattoFA}">
+					<td th:text=${contatto.nome}></td>
+					<td th:text=${contatto.cognome}></td>
+					<td th:text=${contatto.username}></td>
+					<td th:text=${contatto.eta}></td>
+				</tr>
+			</tbody>
+		</table>
+	
+	<div class="pb-2 mt-4 mb-2">
+			<h1>contattoMichele</h1>
+		</div>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>Cognome</th>
+					<th>Username</th>
+					<th>Eta</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="contatto: ${contattoMichele}">
+					<td th:text=${contatto.nome}></td>
+					<td th:text=${contatto.cognome}></td>
+					<td th:text=${contatto.username}></td>
+					<td th:text=${contatto.eta}></td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<div class="pb-2 mt-4 mb-2">
+			<h1>contattoIMR</h1>
+		</div>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>Cognome</th>
+					<th>Username</th>
+					<th>Eta</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="contatto: ${contattoIMR}">
+					<td th:text=${contatto.nome}></td>
+					<td th:text=${contatto.cognome}></td>
+					<td th:text=${contatto.username}></td>
+					<td th:text=${contatto.eta}></td>
+				</tr>
+			</tbody>
+		</table>
+	
+	<div class="pb-2 mt-4 mb-2">
+			<h1>contattiGiovaniQuery</h1>
+		</div>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>Cognome</th>
+					<th>Username</th>
+					<th>Eta</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="contatto: ${contattiGiovaniQuery}">
+					<td th:text=${contatto.nome}></td>
+					<td th:text=${contatto.cognome}></td>
+					<td th:text=${contatto.username}></td>
+					<td th:text=${contatto.eta}></td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+</body>
+</html>
